@@ -124,7 +124,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #333333;
+    background: #fefefe;
     transition: opacity 0.75s, visibility 0.75s;
     z-index: 1;
   }
