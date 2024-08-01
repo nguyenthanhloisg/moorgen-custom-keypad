@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function saveElementAsImage(elementId) {
     const inputImage = document.getElementById(elementId);
-    html2canvas(inputImage, {scale: 2, useCORS: true, backgroundColor: null}).then(function(canvas) {
+    html2canvas(inputImage, {dpi: 192, scale: 2, useCORS: true, backgroundColor: null}).then(function(canvas) {
         const imgData = canvas.toDataURL("image/png", 1.0); // Chất lượng cao nhất
         sessionStorage.setItem("outputImage", imgData); // Lưu hình ảnh vào sessionStorage
     })
