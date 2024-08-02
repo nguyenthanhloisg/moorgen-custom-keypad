@@ -26,14 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
         imageElement.src = outputImage
     }
 
+    
+
     document.getElementById('button-download').addEventListener('click', function() {
-        const image = document.getElementById('output-image');
-        const link = document.createElement('a');
-        link.href = image.src;
-        link.download = 'Artwork.png'; // Tên file khi tải về
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        saveElementAsImage('output-image__outside');
     });
 
     // Cập nhật nội dung cho artwork-name và component-name
@@ -49,3 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById(id).addEventListener("click", () => sessionStorage.clear())
     })
 })
+
+function saveElementAsImage(elementId) {
+    const inputImage = document.getElementById(elementId);
+    html2canvas(inputImage, {dpi: 192, scale: 2, useCORS: true}).then(function(canvas) {
+        const imgData = canvas.toDataURL("image/png", 1.0); // Chất lượng cao nhất
+        const link = document.createElement('a');
+        link.href = imgData;
+        link.download = 'Artwork.png'; // Tên file khi tải về
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+}
