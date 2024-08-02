@@ -270,8 +270,8 @@ img {
     display: flex;
 }
 .body-section {
-    margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+    padding-bottom: 0;
     padding-left: 5rem;
     padding-right: 5rem;
     position: relative;
@@ -357,6 +357,7 @@ img {
     position: static;
     top: 25%;
     bottom: 75%;
+    padding-bottom: 3rem;
     left: 0;
     right: 0;
 }
@@ -835,6 +836,34 @@ img {
     border: 2px solid var(--yellow-hover);
 }
 /* engraving-double-line-layout*/
+
+.button-container {
+    position: sticky;
+    left: 0%;
+    right: 0%;
+    bottom: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-set-layout {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
+    padding: 9px 15px 9px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.3s;
+    background-color: var(--white-custom);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.button-set-layout:hover {
+    background-color: var(--yellow-hover);
+    transform: scale(1.08);
+}
 
 hr{
     margin-top: 0.6rem;

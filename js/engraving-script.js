@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
-        saveElementAsImage('engravedImage')
+        // saveElementAsImage('engravedImage')
     
     //show wrapperPopper
     rows.forEach(row => {
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const iconPickerElement = document.getElementById(pickerId);
                 if (iconPickerElement) {
                     iconPickerElement.src = iconPicker.src;
-                    saveElementAsImage('engravedImage');
+                    // saveElementAsImage('engravedImage');
                 }
             }
         });
@@ -145,12 +145,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    document.getElementById('button__set--layout').addEventListener('click', function() {
+        saveElementAsImage('engravedImage');
+        alert("Layout has been set")
+    });
+
     // Add click event listener to the logo to clear sessionStorage
     document.getElementById("logo-link").addEventListener("click", () => {
         sessionStorage.clear()
-    })
-
-        
+    }) 
 });
 
 // function showLayout(layout) {
@@ -194,7 +197,7 @@ function updateText(inputId, displayId) {
     inputElement.addEventListener('input', function() {
         displayElement.textContent = this.value;
         sessionStorage.setItem(inputId, this.value);
-        saveElementAsImage('engravedImage')
+        // saveElementAsImage('engravedImage')
     });
 }
 

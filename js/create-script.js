@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         imageElement.src = outputImage
     }
 
-    
-
     document.getElementById('button-download').addEventListener('click', function() {
         saveElementAsImage('output-image__outside');
     });
@@ -48,7 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function saveElementAsImage(elementId) {
     const inputImage = document.getElementById(elementId);
-    html2canvas(inputImage, {dpi: 192, scale: 2, useCORS: true}).then(function(canvas) {
+    const button = document.getElementById('button-download');
+    
+    // Ẩn button trước khi tạo hình ảnh
+    button.style.display = 'none';
+    
+    html2canvas(inputImage, {dpi: 144, scale: 2, useCORS: true}).then(function(canvas) {
         const imgData = canvas.toDataURL("image/png", 1.0); // Chất lượng cao nhất
         const link = document.createElement('a');
         link.href = imgData;
@@ -56,5 +59,8 @@ function saveElementAsImage(elementId) {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        
+        // Hiển thị lại button sau khi hình ảnh đã được tạo
+        button.style.display = 'block';
     });
 }
