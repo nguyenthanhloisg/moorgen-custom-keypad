@@ -145,9 +145,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    //su kien nut nhan
+    let isButtonClick = false;
+
     document.getElementById('button__set--layout').addEventListener('click', function() {
+        isButtonClick = true
         saveElementAsImage('engravedImage');
         alert("Layout has been set")
+    });
+
+    document.getElementById('direct-button-next').addEventListener('click', event => {
+        if (isButtonClick === false){
+            alert("Layout has not been set yet\nPlease click: SET LAYOUT")
+            event.preventDefault()
+        }
     });
 
     // Add click event listener to the logo to clear sessionStorage
