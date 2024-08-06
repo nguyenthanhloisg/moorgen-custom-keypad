@@ -49,21 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
     ]
 
     // Khôi phục img src từ sessionStorage khi tải lại trang
-        rows.forEach(row => {
-            const buttonId = `icon-selector-${row}`;
-            const pickerId = `icon-picker-${row}`;
-            const savedSrc = sessionStorage.getItem(buttonId);
-            const iconPickerElement = document.getElementById(pickerId);
-    
-            if (iconPickerElement) {
-                if (savedSrc) {
-                    iconPickerElement.src = savedSrc;
-                } else {
-                    // Đặt src mặc định nếu không có dữ liệu trong sessionStorage
-                    iconPickerElement.src = '../img/icon/light/light-icon-0.svg';
-                }
-            }
-        });
+    const defaultIconClass = 'icomoon-light-icon-0';
+    const savedIcons = JSON.parse(sessionStorage.getItem('selectedIcons')) || {};
+    rows.forEach(row => {
+        const iconImgContainer = document.querySelector(`.icon-img-container.${row} i`);
+        const iconClass = savedIcons[row] || defaultIconClass;
+        iconImgContainer.className = iconClass;
+    });
 
     rows.forEach(function (row) {
         updateText("input-" + row, "sl-" + row)

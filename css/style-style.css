@@ -378,12 +378,10 @@ img {
     position: relative;
 }
 
-.icon-picker {
-    user-select: none;
-    /* width: 100%;
-    height: auto;
-    object-fit: contain; */
-    transform: scale(1.4);
+.icon-img-container i{
+    color: white;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .icon-img-container.row1-1 {
@@ -493,8 +491,8 @@ img {
     font-size: 0.6rem;
     font-weight: 400;
     line-height: 0.8rem;
-    color: rgba(255, 255, 255, 0.85);
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.75);
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     user-select: none;
 }
 .fira-sans-10.is-right {
@@ -668,11 +666,10 @@ img {
     line-height: 15px;
 }
 
-html::-webkit-scrollbar{
-    /* width: 10px; */
-    width: 0;  /* Ẩn thanh cuộn dọc */
-    height: 0; /* Ẩn thanh cuộn ngang */
-}
+/* html::-webkit-scrollbar{
+    width: 0;  
+    height: 0; 
+} */
 /* 
 html::-webkit-scrollbar-thumb{
     background-color: var(--black-backgroud);

@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageElement = document.getElementById("style-image");
 
     const popperWrapper = document.querySelector('.popper-wrapper');
-    const iconSelectorContainers = document.querySelectorAll('.icon-selector-container-outside');
 
     const rows = ['row1-1', 'row1-2', 'row2-1', 'row2-2', 'row3-1', 'row3-2', 'row4-1', 'row4-2'];
-
+    const defaultIconClass = 'icomoon-light-icon-0';
+    
     if (selectedImage) {
         imageElement.src = `../img/${selectedImage}`;
         imageElement.alt = selectedImage;
@@ -26,96 +26,73 @@ document.addEventListener("DOMContentLoaded", () => {
         //show layout icon-only
         document.querySelector(".style-icon-only-layout").style.display = "block"
         document.querySelector(".engraving-icon-only-layout").style.display = "grid"
+
         // Khôi phục img src từ sessionStorage khi tải lại trang
+        const savedIcons = JSON.parse(sessionStorage.getItem('selectedIcons')) || {};
         rows.forEach(row => {
-            const buttonId = `icon-selector-${row}`;
-            const pickerIdFF = `icon-picker-${row}`;
-
-            const savedSrc = sessionStorage.getItem(buttonId);
-
-            const iconPickerElementFF = document.getElementById(pickerIdFF);
-            const buttonidElement = document.getElementById(buttonId);
-            
-            if (iconPickerElementFF) {
-                if (savedSrc) {
-                    buttonidElement.src = savedSrc;
-                    iconPickerElementFF.src = savedSrc;
-                } else {
-                    // Đặt src mặc định nếu không có dữ liệu trong sessionStorage
-                    iconPickerElementFF.src = '../img/icon/light/light-icon-0.svg';
-                    buttonidElement.src = '../img/icon/light/light-icon-0.svg';
-                }
-            }
-        });
-        // saveElementAsImage('engravedImage')
-    
-    //show wrapperPopper
-    rows.forEach(row => {
-        const container = document.querySelector(`.icon-selector-container-outside.${row}`);
-        const button = document.getElementById(`icon-selector-${row}`);
+            const iconSelector = document.querySelector(`.icon-selector-container-outside.${row} i`);
+            const iconImgContainer = document.querySelector(`.icon-img-container.${row} i`);
         
-        container.addEventListener('click', (event) => {
-            // Hiển thị popper-wrapper
-            popperWrapper.style.display = 'none';
-    
-            // Reset animation
-            popperWrapper.classList.remove('popper-wrapper__popup');
-            void popperWrapper.offsetWidth; // Trigger reflow
-            popperWrapper.classList.add('popper-wrapper__popup');
-            
-            popperWrapper.style.display = 'block';
-    
-            // Đặt lại vị trí cuộn về đầu
-            popperWrapper.scrollTop = 0;
-    
-            // Xóa class active-color của các button trước đó
-            iconSelectorContainers.forEach(btn => btn.classList.remove('active-color'));
-            event.currentTarget.classList.add('active-color');
-    
-            // Thêm class active-color cho button được click
-            button.classList.add('active-color');
-    
-            // Lưu vị trí button hiện tại
-            currentButton = button;
-    
-            // Ngăn chặn sự kiện click lan ra ngoài
+            const iconClass = savedIcons[row] || defaultIconClass;
+            iconSelector.className = iconClass;
+            iconImgContainer.className = iconClass;
+        
+            // Thêm sự kiện click cho icon-selector
+            document.querySelector(`.icon-selector-container-outside.${row}`).addEventListener('click', function(event) {
+                // Bỏ active-color từ các nút khác
+                document.querySelectorAll('.icon-selector-container-outside').forEach(el => el.classList.remove('active-color'));
+        
+                // Thêm active-color cho nút được click
+                this.classList.add('active-color');
+                        
+                // Hiển thị popper-wrapper
+                popperWrapper.style.display = 'none';
+        
+                // Reset animation
+                popperWrapper.classList.remove('popper-wrapper__popup');
+                void popperWrapper.offsetWidth; // Trigger reflow
+                popperWrapper.classList.add('popper-wrapper__popup');
+                
+                popperWrapper.style.display = 'block';
+        
+                // Đặt lại vị trí cuộn về đầu
+                popperWrapper.scrollTop = 0;
+
+                currentButton = row;
+
+                event.stopPropagation(); // Ngăn chặn sự kiện lan truyền đến document
+            });
+        });
+        // Thêm sự kiện click cho popper-icon-picker
+        document.querySelectorAll('.popper-icon-picker-outside').forEach(picker => {
+            picker.addEventListener('click', function() {
+                if (currentButton) {
+                    const iconClass = this.querySelector('i').className;
+                    const iconSelector = document.querySelector(`.icon-selector-container-outside.${currentButton} i`);
+                    const iconImgContainer = document.querySelector(`.icon-img-container.${currentButton} i`);
+
+                    iconSelector.className = iconClass;
+                    iconImgContainer.className = iconClass;
+
+                    // Lưu lại icon đã chọn vào sessionStorage
+                    savedIcons[currentButton] = iconClass;
+                    sessionStorage.setItem('selectedIcons', JSON.stringify(savedIcons));
+
+                    // Ẩn popperWrapper
+                    popperWrapper.style.display = 'none';
+                }
+            });
+        });
+
+        // Ngăn chặn sự kiện click lan truyền từ popperWrapper đến document
+        popperWrapper.addEventListener('click', function(event) {
             event.stopPropagation();
         });
-    });
 
-    // Ẩn popper-wrapper khi click ra ngoài
-    document.addEventListener('click', () => {
-        popperWrapper.style.display = 'none';
-        iconSelectorContainers.forEach(button => button.classList.remove('active-color'));
-    });
-
-    // Ngăn chặn sự kiện click trên popper-wrapper lan ra ngoài
-    // popperWrapper.addEventListener('click', (event) => {
-    //     event.stopPropagation();
-    // });
-
-    // Update iconPicker
-    const iconPickers = document.querySelectorAll('.popper-icon-picker-outside');
-    iconPickers.forEach(iconPickerOutside => {
-        iconPickerOutside.addEventListener('click', () => {
-            const iconPicker = iconPickerOutside.querySelector('img');
-            if (currentButton && iconPicker) {
-                // Thay đổi img src của button hiện tại
-                currentButton.src = iconPicker.src;
-
-                // Lưu img src vào sessionStorage
-                sessionStorage.setItem(currentButton.id, iconPicker.src);
-
-                // Cập nhật lại icon-picker tương ứng
-                const pickerId = currentButton.id.replace('icon-selector', 'icon-picker');
-                const iconPickerElement = document.getElementById(pickerId);
-                if (iconPickerElement) {
-                    iconPickerElement.src = iconPicker.src;
-                    // saveElementAsImage('engravedImage');
-                }
-            }
+        // Ẩn popperWrapper khi click ra ngoài
+        document.addEventListener('click', function() {
+            popperWrapper.style.display = 'none';
         });
-    });
 
     } else if (selectedLayout === "single-line"){
         // Hide all layouts

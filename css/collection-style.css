@@ -304,11 +304,11 @@ img {
     flex-flow: column;
 }
 
-html::-webkit-scrollbar{
-    /* width: 10px; */
-    width: 0;  /* Ẩn thanh cuộn dọc */
-    height: 0; /* Ẩn thanh cuộn ngang */
-}
+/* html::-webkit-scrollbar{
+    width: 0;  
+    height: 0;
+} */
+ 
 /* 
 html::-webkit-scrollbar-thumb{
     background-color: var(--black-backgroud);
