@@ -123,19 +123,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //su kien nut nhan
-    let isButtonClick = false;
+    // let isButtonClick = false;
 
-    document.getElementById('button__set--layout').addEventListener('click', function() {
-        isButtonClick = true
-        saveElementAsImage('engravedImage');
-        alert("Layout has been set")
-    });
+    // document.getElementById('button__set--layout').addEventListener('click', function() {
+    //     isButtonClick = true
+    //     saveElementAsImage('engravedImage');
+    //     alert("Layout has been set")
+    // });
 
-    document.getElementById('direct-button-next').addEventListener('click', event => {
-        if (isButtonClick === false){
-            alert("Layout has not been set yet\nPlease click: SET LAYOUT")
-            event.preventDefault()
-        }
+    document.getElementById('direct-button-next').addEventListener('click', () => {
+        saveElementAsImage('engravedImage', () => {
+            window.location.href = '../configuration/';
+        });
     });
 
     // Add click event listener to the logo to clear sessionStorage
@@ -163,12 +162,24 @@ document.addEventListener("DOMContentLoaded", () => {
 //     sessionStorage.setItem('selectedLayout', layout);
 // }
 
-function saveElementAsImage(elementId) {
+// function saveElementAsImage(elementId) {
+//     const inputImage = document.getElementById(elementId);
+//     html2canvas(inputImage, {dpi: 192, scale: 2, useCORS: true, backgroundColor: null}).then(function(canvas) {
+//         const imgData = canvas.toDataURL("image/png", 1.0); // Chất lượng cao nhất
+//         sessionStorage.setItem("outputImage", imgData); // Lưu hình ảnh vào sessionStorage
+//     })
+// }
+
+function saveElementAsImage(elementId, callback) {
     const inputImage = document.getElementById(elementId);
     html2canvas(inputImage, {dpi: 192, scale: 2, useCORS: true, backgroundColor: null}).then(function(canvas) {
         const imgData = canvas.toDataURL("image/png", 1.0); // Chất lượng cao nhất
         sessionStorage.setItem("outputImage", imgData); // Lưu hình ảnh vào sessionStorage
-    })
+        if (callback) callback(); // Gọi callback khi hoàn tất
+    }).catch(error => {
+        console.error('Error saving image:', error);
+        if (callback) callback(error); // Gọi callback với lỗi nếu có
+    });
 }
 
 function updateText(inputId, displayId) {

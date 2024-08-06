@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: 
+    src: url('../font/FiraSans-Regular.ttf') format('ttf'),
       url('../font/FiraSans-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;

@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Fira Sans';
-    src: 
+    src: url('../font/FiraSans-Regular.ttf') format('ttf'),
       url('../font/FiraSans-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -384,6 +384,9 @@ img {
     color: var(--yellow-hover);
     width: 16px;
     height: 18px;
+}
+#direct-button-next {
+    cursor: pointer;
 }
 .style-product-container {
     flex-flow: column;
