@@ -742,9 +742,6 @@
 .icomoon-light-icon-0:before {
   content: "\e9ef";
 }
-.icomoon-light-icon-1:before {
-  content: "\e9f0";
-}
 .icomoon-light-icon-2:before {
   content: "\e9f1";
 }
@@ -756,6 +753,9 @@
 }
 .icomoon-light-icon-5:before {
   content: "\e9f4";
+}
+.icomoon-light-icon-1:before {
+  content: "\e9f0";
 }
 .icomoon-light-icon-6:before {
   content: "\e9f5";

@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 popperWrapper.style.display = 'block';
         
                 // Đặt lại vị trí cuộn về đầu
-                popperWrapper.scrollTop = 0;
+                // popperWrapper.scrollTop = 0;
 
                 currentButton = row;
 
