@@ -393,6 +393,10 @@ img {
     margin-left: 0.2rem;
 }
 
+.radio-group label{
+    cursor: pointer;
+}
+
 .configure-single-line-input {
     margin: 8px;
     width: 20rem;
