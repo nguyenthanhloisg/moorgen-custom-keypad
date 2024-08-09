@@ -12,20 +12,6 @@
         <script src="../js/style-script.js" defer></script>
     </head>
     <body>
-        <div class="loader"></div>
-        <script>
-            window.addEventListener("load", () => {
-                const loader = document.querySelector(".loader");
-        
-                loader.classList.add("loader--hidden");
-        
-                loader.addEventListener("transitionend", () => {
-                    if (loader && loader.parentElement) {
-                        document.body.removeChild(loader);
-                    }
-                });
-            });
-        </script>
         <div id="style-page-content">
             <section class="navigation">
                 <a href="../" class="logo-moorgen-link-home w-inline-block" id="logo-link">

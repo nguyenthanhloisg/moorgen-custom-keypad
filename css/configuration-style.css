@@ -294,6 +294,7 @@ img {
     bottom: 55%;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 .direct-button {
     border-radius: 5px;

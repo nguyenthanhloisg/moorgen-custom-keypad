@@ -366,6 +366,8 @@ img {
     right: 0;
 }
 .material-product-image {
+    height: 18.5rem;
+    width: 18.5rem;
     flex-flow: row;
     justify-content: center;
     align-items: center;
@@ -378,6 +380,7 @@ img {
 }
 .materials-product-image {
     height: 18.5rem;
+    width: 18.5rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
     position: relative;
 }
