@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'Inter';
+    src: 
+      url('../font/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: 
+      url('../font/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: 
+      url('../font/Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+}
+footer,
+header,
+menu,
+section {
+    display: block;
+}
+[hidden] {
+    display: none;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+a:active,
+a:hover {
+    outline: 0;
+}
+img {
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    color: #333;
+    background-color: #fefefe;
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+}
+.w-block {
+    display: block;
+}
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+html[data-w-dynpage] [data-w-cloak] {
+    color: transparent !important;
+}
+.w-list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+[type="button"],
+[type="reset"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    border: 0;
+}
+.w-container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.w-container:after,
+.w-container:before {
+    content: " ";
+    grid-area: 1/1/2/2;
+    display: table;
+}
+.w-container:after {
+    clear: both;
+}
+.w-col {
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+.w-col .w-col {
+    padding-left: 0;
+    padding-right: 0;
+}
+.w-col-1 {
+    width: 8.33333%;
+}
+.w-col-2 {
+    width: 16.6667%;
+}
+.w-col-3 {
+    width: 25%;
+}
+.w-col-4 {
+    width: 33.3333%;
+}
+.w-col-5 {
+    width: 41.6667%;
+}
+.w-col-6 {
+    width: 50%;
+}
+.w-col-7 {
+    width: 58.3333%;
+}
+.w-col-8 {
+    width: 66.6667%;
+}
+.w-col-9 {
+    width: 75%;
+}
+.w-col-10 {
+    width: 83.3333%;
+}
+.w-col-11 {
+    width: 91.6667%;
+}
+.w-col-12 {
+    width: 100%;
+}
+[data-nav-menu-open] {
+    text-align: center;
+    background: #c8c8c8;
+    min-width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    overflow: visible;
+    display: block !important;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+:root {
+    --black-backgroud: #333;
+    --white-custom: #fefefe;
+    --yellow-hover: #ffae00;
+}
+body {
+    color: var(--black-backgroud);
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+.logo-moorgen {
+    height: auto;
+    max-height: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.wrapper-menu {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    display: flex;
+}
+.header-menu-item {
+    color: var(--white-custom);
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.header-menu-item:hover {
+    color: var(--yellow-hover);
+}
+.navigation {
+    background-color: var(--black-backgroud);
+    justify-content: space-between;
+    align-items: stretch;
+    height: 3.5rem;
+    width: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+}
+.body-section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.addstep-wrapper {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: block;
+}
+.list-addstep {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    color: var(--black-backgroud);
+    font-size: 1rem;
+    display: flex;
+}
+.footer {
+    z-index: auto;
+    background-color: var(--black-backgroud);
+    width: 100%;
+    height: 3.5rem;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.collection-product-container {
+    z-index: auto;
+    grid-column-gap: 8.5rem;
+    grid-row-gap: 5rem;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 48%;
+    bottom: 52%;
+    left: 0;
+    right: 0;
+}
+.collection-product-col {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    height: 16rem;
+    width: 16rem;
+}
+.item1-collection-page {
+    color: var(--yellow-hover);
+}
+.logo-moorgen-link-home {
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    display: flex;
+}
+
+.collection-product-image {
+    height: 16rem;
+    width: 16rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    transition: transform 0.5s;
+}
+.collection-product-col:hover .collection-product-image {
+    transform: translateY(-2.5rem) scale(1.15);
+}
+.collection-product-name {
+    z-index: -1;
+    position: absolute;
+    bottom: 0.5rem;
+    transition: transform 0.5s;
+}
+.collection-product-col:hover .collection-product-name {
+    transform: translateY(2.5rem) scale(1.5);
+}
+.text-medium-12 {
+    color: var(--black-backgroud);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+.body {
+    flex-flow: column;
+}
+
+/* html::-webkit-scrollbar{
+    width: 0;  
+    height: 0;
+} */
+ 
+/* 
+html::-webkit-scrollbar-thumb{
+    background-color: var(--black-backgroud);
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white-custom);
+} */

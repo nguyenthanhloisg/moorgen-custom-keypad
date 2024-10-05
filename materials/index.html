@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- change title -->
+        <title>Moorgen Artwork Tool</title>
+        <!-- add logo -->
+        <link rel="icon" type="image/png" href="../img/logo-title-page.png">
+
+        <link href="../css/materials-style.css" rel="stylesheet" type="text/css" />
+
+        <link rel="preload" href="../img/supercar-snowflake-silver.jpg" as="image">
+        <link rel="preload" href="../img/supercar-mica-black.jpg" as="image">
+        <link rel="preload" href="../img/supercar-champagne-silver.jpg" as="image">
+        <link rel="preload" href="../img/supercar-champagne-gold.jpg" as="image">
+        <link rel="preload" href="../img/swiss-warm-white.jpg" as="image">
+        <link rel="preload" href="../img/swiss-snowflake-silver.jpg" as="image">
+        <link rel="preload" href="../img/swiss-mica-black.jpg" as="image">
+        <link rel="preload" href="../img/swiss-gem-gray.jpg" as="image">
+        <link rel="preload" href="../img/swiss-ferrari-red.jpg" as="image">
+        <link rel="preload" href="../img/swiss-champaign-silver.jpg" as="image">
+        <link rel="preload" href="../img/swiss-champaign-gold.jpg" as="image">
+        
+        <script src="../js/materials-script.js"></script>
+        
+    </head>
+    <body>
+        <div class="loader"></div>
+
+        <style>.loader{position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#fefefe;z-index:1}.loader--hidden{opacity:0;visibility:hidden}.loader::after{content:""}</style>
+        
+        <script>window.addEventListener("load",()=>{const loader=document.querySelector(".loader");loader.classList.add("loader--hidden");loader.addEventListener("transitionend",()=>{if(loader&&loader.parentElement){document.body.removeChild(loader)}})});</script>
+
+        <section class="navigation">
+            <a href="../" class="logo-moorgen-link-home w-inline-block" id="logo-link">
+                <img
+                    src="../img/logo-moorgen.png"
+                    alt="logo moorgen"
+                    class="logo-moorgen"
+                />
+            </a>
+            <div class="wrapper-menu">
+                <a
+                    href="https://moorgen.hk/pages/steve-leung-smart-panel"
+                    target="_blank"
+                    class="header-menu-item"
+                >
+                    Steve Leung
+                </a>
+                <a
+                    href="https://moorgen.hk/pages/smart-panel-swiss-series"
+                    target="_blank"
+                    class="header-menu-item"
+                >
+                    Swiss
+                </a>
+            </div>
+        </section>
+        <section class="body-section">
+            <div class="addstep-wrapper">
+                <ul role="list" class="list-addstep w-list-unstyled">
+                    <li class="item1-materials-page">1. Collection</li>
+                    <li class="item2-materials-page">2. Materials</li>
+                    <li class="item3-materials-page">3. Style</li>
+                    <li class="item4-materials-page">4. Engraving</li>
+                    <li class="item5-materials-page">5. Configuration</li>
+                    <li class="item6-materials-page">6. Create</li>
+                </ul>
+            </div>
+            <!-- direct-button -->
+            <div class="materials-direct-button-container">
+                <a href="../" id="link-collection-page">
+                    <div class="materials-direct-button">
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="materials-button-image">
+                            <path d="M0.999999 10.7454C-0.333334 9.96966 -0.333334 8.03033 0.999999 7.2546L13 0.273018C14.3333 -0.502713 16 0.466952 16 2.01842L16 15.9816C16 17.533 14.3333 18.5027 13 17.727L0.999999 10.7454Z" fill="#333333"/>
+                        </svg>
+                    </div>
+                </a>
+                <a href="../style/">
+                    <div class="materials-direct-button">
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="materials-button-image">
+                            <path d="M15 7.25461C16.3333 8.03034 16.3333 9.96967 15 10.7454L3 17.727C1.66667 18.5027 -6.72981e-08 17.533 0 15.9816L6.05683e-07 2.01842C6.72982e-07 0.466953 1.66667 -0.502711 3 0.273021L15 7.25461Z" fill="#333333"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            
+            <!--  -->
+            <div class="materials-product-container">
+                <div class="material-product-image">
+                    <img
+                        id = "material-image"
+                        alt="materials image"
+                        class="materials-product-image"
+                    />
+                </div>
+                <div class="materials-product-color-picker-container supercar-series">
+                    <div class="mateial-product-color-picker-title">
+                        <div class="text-medium-20">SURFACE</div>
+                    </div>
+                    <!-- row1 -->
+                    <div class="material-product-color-picker-row1">
+                        <div class="row1-color-picker-1-container">
+                            <img
+                                src="../img/color-picker-supercar-snowflake-silver.jpg"
+                                alt="supercar-snowflake-silver.jpg"
+                                class="color-picker-image row1-color1"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row1-text1">
+                                Snowflake
+                                <br />
+                                Silver
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row1-color-picker-2-container">
+                            <img
+                                src="../img/color-picker-supercar-mica-black.jpg"
+                                alt="supercar-mica-black.jpg"
+                                class="color-picker-image row1-color2"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row1-text2">
+                                Mica
+                                <br />
+                                Black
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row1-color-picker-3-container">
+                            <img
+                                src="../img/color-picker-supercar-champagne-gold.jpg"
+                                alt="supercar-champagne-gold.jpg"
+                                class="color-picker-image row1-color3"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row1-text3">
+                                Champagne
+                                <br />
+                                Gold
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row1-color-picker-4-container">
+                            <img
+                                src="../img/color-picker-supercar-champagne-silver.jpg"
+                                alt="supercar-champagne-silver.jpg"
+                                class="color-picker-image row1-color4"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row1-text4">
+                                Champagne
+                                <br />
+                                Silver
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row1 -->
+                </div>
+
+                <div class="materials-product-color-picker-container swiss-series">
+                    <div class="mateial-product-color-picker-title">
+                        <div class="text-medium-20">SURFACE</div>
+                    </div>
+                    <!-- row1 -->
+                    <div class="material-product-color-picker-row1">
+                        <div class="row1-color-picker-1-container">
+                            <img
+                                src="../img/color-picker-swiss-snowflake-silver.jpg"
+                                alt="swiss-snowflake-silver.jpg"
+                                class="color-picker-image row1-color1"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row1-text1">
+                                Snowflake
+                                <br />
+                                Silver
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row1-color-picker-2-container">
+                            <img
+                                src="../img/color-picker-swiss-warm-white.jpg"
+                                alt="swiss-warm-white.jpg"
+                                class="color-picker-image row1-color2"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row1-text2">
+                                Warm
+                                <br />
+                                White
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row1-color-picker-3-container">
+                            <img
+                                src="../img/color-picker-swiss-mica-black.jpg"
+                                alt="swiss-mica-black.jpg"
+                                class="color-picker-image row1-color3"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row1-text3">
+                                Mica
+                                <br />
+                                Black
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row1-color-picker-4-container">
+                            <img
+                                src="../img/color-picker-swiss-gem-gray.jpg"
+                                alt="swiss-gem-gray.jpg"
+                                class="color-picker-image row1-color4"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row1-text4">
+                                Gem
+                                <br />
+                                Gray
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row1 -->
+                    <!-- row2 -->
+                    <div class="material-product-color-picker-row2">
+                        <div class="row2-color-picker-1-container">
+                            <img
+                                src="../img/color-picker-swiss-champaign-gold.jpg"
+                                alt="swiss-champaign-gold.jpg"
+                                class="color-picker-image row2-color1"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row2-text1">
+                                Champagne
+                                <br />
+                                Gold
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row2-color-picker-2-container">
+                            <img
+                                src="../img/color-picker-swiss-champaign-silver.jpg"
+                                alt="swiss-champaign-silver.jpg"
+                                class="color-picker-image row2-color2"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row2-text2">
+                                Champagne
+                                <br />
+                                Silver
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row2-color-picker-3-container">
+                            <img
+                                src="../img/color-picker-swiss-ferrari-red.jpg"
+                                alt="swiss-ferrari-red.jpg"
+                                class="color-picker-image row2-color3"
+                                
+                            />
+                            <div class="text-semibold-10-shadow">
+                                <div class="row2-text3">
+                                Ferrari
+                                <br />
+                                Red
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row2 -->
+                </div>
+            </div>
+        </section>
+        <!-- <section class="footer"></section> -->
+        
+    </body>
+</html>

@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- change title -->
+        <title>Moorgen Artwork Tool</title>
+        <!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
+        <!-- add logo -->
+        <link rel="icon" type="image/png" href="../img/logo-title-page.png" />
+        <link href="../css/icomoon-moorgen.css" rel="stylesheet" type="text/css" />
+        <link href="../css/engraving-style.css" rel="stylesheet" type="text/css" />
+        <script src="../js/html2canvas.js"></script>
+        <script src="../js/popper.min.js"></script> 
+        <script src="../js/engraving-script.js"></script>
+    </head>
+    <body>
+        <div class="loader"></div>
+
+        <style>.loader{position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#fefefe;z-index:1}.loader--hidden{opacity:0;visibility:hidden}.loader::after{content:""}</style>
+        
+        <script>window.addEventListener("load",()=>{const loader=document.querySelector(".loader");loader.classList.add("loader--hidden");loader.addEventListener("transitionend",()=>{if(loader&&loader.parentElement){document.body.removeChild(loader)}})});</script>
+
+        <div id="style-page-content">
+            <section class="navigation">
+                <a href="../" class="logo-moorgen-link-home w-inline-block" id="logo-link">
+                    <img src="../img/logo-moorgen.png" alt="logo moorgen" class="logo-moorgen" />
+                </a>
+                <div class="wrapper-menu">
+                    <a href="https://moorgen.hk/pages/steve-leung-smart-panel" target="_blank" class="header-menu-item">
+                        Steve Leung
+                    </a>
+                    <a
+                        href="https://moorgen.hk/pages/smart-panel-swiss-series"
+                        target="_blank"
+                        class="header-menu-item"
+                    >
+                        Swiss
+                    </a>
+                </div>
+            </section>
+            <section class="body-section">
+                <div class="addstep-wrapper">
+                    <ul role="list" class="list-addstep w-list-unstyled">
+                        <li class="item1-engraving-page">1. Collection</li>
+                        <li class="item2-engraving-page">2. Materials</li>
+                        <li class="item3-engraving-page">3. Style</li>
+                        <li class="item4-engraving-page">4. Engraving</li>
+                        <li class="item5-engraving-page">5. Configuration</li>
+                        <li class="item6-engraving-page">6. Create</li>
+                    </ul>
+                </div>
+                <!-- direct-button -->
+                <div class="direct-button-container">
+                    <a href="../style/">
+                        <div class="direct-button">
+                            <svg
+                                width="16"
+                                height="18"
+                                viewBox="0 0 16 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="direct-button-image"
+                            >
+                                <path
+                                    d="M0.999999 10.7454C-0.333334 9.96966 -0.333334 8.03033 0.999999 7.2546L13 0.273018C14.3333 -0.502713 16 0.466952 16 2.01842L16 15.9816C16 17.533 14.3333 18.5027 13 17.727L0.999999 10.7454Z"
+                                    fill="#333333"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <a id="direct-button-next">
+                        <div class="direct-button">
+                            <svg
+                                width="16"
+                                height="18"
+                                viewBox="0 0 16 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="direct-button-image"
+                            >
+                                <path
+                                    d="M15 7.25461C16.3333 8.03034 16.3333 9.96967 15 10.7454L3 17.727C1.66667 18.5027 -6.72981e-08 17.533 0 15.9816L6.05683e-07 2.01842C6.72982e-07 0.466953 1.66667 -0.502711 3 0.273021L15 7.25461Z"
+                                    fill="#333333"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <!--  -->
+                <div class="style-product-container">
+                    <div class="popper-wrapper-outside">
+                        <div class="popper-wrapper">
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-20 right mgb2">ICON SELECTION</div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">General Lights</div>
+                            </div>
+                            <!-- light -->
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-13"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-14"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-15"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-16"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-17"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-18"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-19"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-20"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-21"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-22"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-23"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-24"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-25"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-26"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-27"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-28"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-29"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-30"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-31"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-32"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-33"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-34"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-35"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-36"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-37"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-38"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-39"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-40"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-41"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-42"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-43"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-44"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-45"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-46"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-47"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-48"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-49"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-50"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-51"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-52"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-53"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-54"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-55"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-56"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-57"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-58"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-59"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-60"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-63"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-64"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-65"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-66"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-67"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-68"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-69"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-70"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-71"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-72"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-73"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-74"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-75"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-76"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-77"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-78"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-79"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-80"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-81"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-light-icon-82"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Interface</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-13"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-14"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-15"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-16"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-17"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-18"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-19"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-20"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-21"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-22"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-23"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-24"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-25"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-26"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-27"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-28"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-29"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-interface-icon-30"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">HVAC</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-13"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-14"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-15"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-16"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-17"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-18"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-19"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-20"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-21"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-22"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-23"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-24"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-25"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-26"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-27"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-28"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-29"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-30"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-HVAC-icon-31"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Media</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-media-icon-12"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Kitchen</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-kitchen-icon-12"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Bathroom</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-13"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-14"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bathroom-icon-15"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Bedroom</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-bedroom-icon-13"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Accessories</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-accessories-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-accessories-icon-10"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-accessories-icon-11"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-accessories-icon-12"></i>
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Activity</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-13"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-14"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-15"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-16"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-17"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-18"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-19"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-20"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-21"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-activity-icon-22"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Relax</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-13"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-14"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-15"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-16"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-17"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-18"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-19"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-relax-icon-20"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Garden</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garden-icon-13"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Garage</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-0"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-1"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-2"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-3"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-4"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-5"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-6"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-7"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-8"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-9"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-10"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-11"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-12"></i></div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-garage-icon-13"></i></div>
+                            </div>
+
+                            <hr />
+
+                            <div class="popper-wrapper-header">
+                                <div class="text-medium-14 left mgb">Roman Number</div>
+                            </div>
+                            <div class="popper-icon-container">
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-0"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-1"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-2"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-3"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-4"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-5"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-6"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-7"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-8"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-9"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-10"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-11"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-12"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-13"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-14"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside">
+                                    <i class="icomoon-roman-number-icon-15"></i>
+                                </div>
+                                <div class="popper-icon-picker-outside"><i class="icomoon-blank-icon"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="style-product-image" id="engravedImage">
+                        <img id="style-image" alt="style image" class="styles-product-image" />
+                        <!-- icon-only-style -->
+                        <div class="style-icon-only-layout style-layout">
+                            <div class="icon-container-row row1">
+                                <div class="icon-img-container row1-1">
+                                    <i class=""></i>
+                                </div>
+                                <div class="icon-img-container row1-2">
+                                    <i class=""></i>
+                                </div>
+                            </div>
+                            <div class="icon-container-row row2">
+                                <div class="icon-img-container row2-1">
+                                    <i class=""></i>
+                                </div>
+                                <div class="icon-img-container row2-2">
+                                    <i class=""></i>
+                                </div>
+                            </div>
+                            <div class="icon-container-row row3">
+                                <div class="icon-img-container row3-1">
+                                    <i class=""></i>
+                                </div>
+                                <div class="icon-img-container row3-2">
+                                    <i class=""></i>
+                                </div>
+                            </div>
+                            <div class="icon-container-row row4">
+                                <div class="icon-img-container row4-1">
+                                    <i class=""></i>
+                                </div>
+                                <div class="icon-img-container row4-2">
+                                    <i class=""></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- icon-only-style -->
+
+                        <!-- single line style -->
+                        <div class="style-single-line-layout style-layout">
+                            <div class="line-container-row row1">
+                                <div class="line-container row1-1">
+                                    <div class="fira-sans-10 is-left row1-1" id="sl-row1-1">Text</div>
+                                </div>
+                                <div class="line-container row1-2">
+                                    <div class="fira-sans-10 is-right row1-2" id="sl-row1-2">Text</div>
+                                </div>
+                            </div>
+                            <div class="line-container-row row2">
+                                <div class="line-container row2-1">
+                                    <div class="fira-sans-10 is-left row2-1" id="sl-row2-1">Text</div>
+                                </div>
+                                <div class="line-container row2-2">
+                                    <div class="fira-sans-10 is-right row2-2" id="sl-row2-2">Text</div>
+                                </div>
+                            </div>
+                            <div class="line-container-row row3">
+                                <div class="line-container row3-1">
+                                    <div class="fira-sans-10 is-left row3-1" id="sl-row3-1">Text</div>
+                                </div>
+                                <div class="line-container row3-2">
+                                    <div class="fira-sans-10 is-right row3-2" id="sl-row3-2">Text</div>
+                                </div>
+                            </div>
+                            <div class="line-container-row row4">
+                                <div class="line-container row4-1">
+                                    <div class="fira-sans-10 is-left row4-1" id="sl-row4-1">Text</div>
+                                </div>
+                                <div class="line-container row4-2">
+                                    <div class="fira-sans-10 is-right row4-2" id="sl-row4-2">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single line style -->
+
+                        <!-- double line style -->
+                        <div class="style-double-line-layout style-layout">
+                            <div class="double-line-container-row row1">
+                                <div class="double-line-container row1-1">
+                                    <div class="fira-sans-10 is-left row1-1-top" id="dl-row1-1-top">Text</div>
+                                    <div class="fira-sans-10 is-left row1-1-bottom" id="dl-row1-1-bottom">Text</div>
+                                </div>
+                                <div class="double-line-container row1-2">
+                                    <div class="fira-sans-10 is-right row1-2-top" id="dl-row1-2-top">Text</div>
+                                    <div class="fira-sans-10 is-right row1-2-bottom" id="dl-row1-2-bottom">Text</div>
+                                </div>
+                            </div>
+                            <div class="double-line-container-row row2">
+                                <div class="double-line-container row2-1">
+                                    <div class="fira-sans-10 is-left row2-1-top" id="dl-row2-1-top">Text</div>
+                                    <div class="fira-sans-10 is-left row2-1-bottom" id="dl-row2-1-bottom">Text</div>
+                                </div>
+                                <div class="double-line-container row2-2">
+                                    <div class="fira-sans-10 is-right row2-2-top" id="dl-row2-2-top">Text</div>
+                                    <div class="fira-sans-10 is-right row2-2-bottom" id="dl-row2-2-bottom">Text</div>
+                                </div>
+                            </div>
+                            <div class="double-line-container-row row3">
+                                <div class="double-line-container row3-1">
+                                    <div class="fira-sans-10 is-left row3-1-top" id="dl-row3-1-top">Text</div>
+                                    <div class="fira-sans-10 is-left row3-1-bottom" id="dl-row3-1-bottom">Text</div>
+                                </div>
+                                <div class="double-line-container row3-2">
+                                    <div class="fira-sans-10 is-right row3-2-top" id="dl-row3-2-top">Text</div>
+                                    <div class="fira-sans-10 is-right row3-2-bottom" id="dl-row3-2-bottom">Text</div>
+                                </div>
+                            </div>
+                            <div class="double-line-container-row row4">
+                                <div class="double-line-container row4-1">
+                                    <div class="fira-sans-10 is-left row4-1-top" id="dl-row4-1-top">Text</div>
+                                    <div class="fira-sans-10 is-left row4-1-bottom" id="dl-row4-1-bottom">Text</div>
+                                </div>
+                                <div class="double-line-container row4-2">
+                                    <div class="fira-sans-10 is-right row4-2-top" id="dl-row4-2-top">Text</div>
+                                    <div class="fira-sans-10 is-right row4-2-bottom" id="dl-row4-2-bottom">Text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- double line style -->
+
+                        <!-- mixing style -->
+                        <div class="style-mixing-layout style-layout">
+                            <div class="double-line-container-row row1">
+                                <div class="double-line-container row1-1">
+                                    <div class="icon-mixing-layout"><i></i></div>
+                                    <div class="fira-sans-10 is-left row1-1-top" id="mx-row1-1-top">Mixing</div>
+                                    <div class="fira-sans-10 is-left row1-1-bottom" id="mx-row1-1-bottom"></div>
+                                </div>
+                                <div class="double-line-container row1-2">
+                                    <div class="icon-mixing-layout right"><i></i></div>
+                                    <div class="fira-sans-10 is-right row1-2-top" id="mx-row1-2-top">Mixing</div>
+                                    <div class="fira-sans-10 is-right row1-2-bottom" id="mx-row1-2-bottom"></div>
+                                </div>
+                            </div>
+                            <div class="double-line-container-row row2">
+                                <div class="double-line-container row2-1">
+                                    <div class="icon-mixing-layout bottom"><i></i></div>
+                                    <div class="fira-sans-10 is-left row2-1-top" id="mx-row2-1-top"></div>
+                                    <div class="fira-sans-10 is-left row2-1-bottom" id="mx-row2-1-bottom">Mixing</div>
+                                </div>
+                                <div class="double-line-container row2-2">
+                                    <div class="icon-mixing-layout right bottom"><i></i></div>
+                                    <div class="fira-sans-10 is-right row2-2-top" id="mx-row2-2-top"></div>
+                                    <div class="fira-sans-10 is-right row2-2-bottom" id="mx-row2-2-bottom">Mixing</div>
+                                </div>
+                            </div>
+                            <div class="double-line-container-row row3">
+                                <div class="double-line-container row3-1">
+                                    <div class="icon-mixing-layout"><i></i></div>
+                                    <div class="fira-sans-10 is-left row3-1-top" id="mx-row3-1-top">Mixing</div>
+                                    <div class="fira-sans-10 is-left row3-1-bottom" id="mx-row3-1-bottom"></div>
+                                </div>
+                                <div class="double-line-container row3-2">
+                                    <div class="icon-mixing-layout right"><i></i></div>
+                                    <div class="fira-sans-10 is-right row3-2-top" id="mx-row3-2-top">Mixing</div>
+                                    <div class="fira-sans-10 is-right row3-2-bottom" id="mx-row3-2-bottom"></div>
+                                </div>
+                            </div>
+                            <div class="double-line-container-row row4">
+                                <div class="double-line-container row4-1">
+                                    <div class="icon-mixing-layout bottom"><i></i></div>
+                                    <div class="fira-sans-10 is-left row4-1-top" id="mx-row4-1-top"></div>
+                                    <div class="fira-sans-10 is-left row4-1-bottom" id="mx-row4-1-bottom">Mixing</div>
+                                </div>
+                                <div class="double-line-container row4-2">
+                                    <div class="icon-mixing-layout right bottom"><i></i></div>
+                                    <div class="fira-sans-10 is-right row4-2-top" id="mx-row4-2-top"></div>
+                                    <div class="fira-sans-10 is-right row4-2-bottom" id="mx-row4-2-bottom">Mixing</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mixing style -->
+                    </div>
+                    <div class="engraving-product-option-container">
+                        <div class="engraving-product-option-title">
+                            <div class="text-medium-20">ENGRAVING</div>
+                        </div>
+                        <!-- engraving-single line-layout -->
+                        <div class="engraving-single-line-layout engraving-layout">
+                            <div class="engraving-single-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-single-line-input row1-1"
+                                    id="input-row1-1"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-single-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-single-line-input row1-2"
+                                    id="input-row1-2"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-single-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-single-line-input row2-1"
+                                    id="input-row2-1"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-single-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-single-line-input row2-2"
+                                    id="input-row2-2"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-single-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-single-line-input row3-1"
+                                    id="input-row3-1"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-single-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-single-line-input row3-2"
+                                    id="input-row3-2"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-single-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-single-line-input row4-1"
+                                    id="input-row4-1"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-single-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-single-line-input row4-2"
+                                    id="input-row4-2"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                        </div>
+                        <!-- engraving-single line-layout -->
+
+                        <!-- engraving-double line-layout -->
+                        <div class="engraving-double-line-layout engraving-layout">
+                            <div class="engraving-double-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row1-1-top"
+                                    id="input-row1-1-top"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row1-1-bottom"
+                                    id="input-row1-1-bottom"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row1-2-top"
+                                    id="input-row1-2-top"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row1-2-bottom"
+                                    id="input-row1-2-bottom"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row2-1-top"
+                                    id="input-row2-1-top"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row2-1-bottom"
+                                    id="input-row2-1-bottom"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row2-2-top"
+                                    id="input-row2-2-top"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row2-2-bottom"
+                                    id="input-row2-2-bottom"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row3-1-top"
+                                    id="input-row3-1-top"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row3-1-bottom"
+                                    id="input-row3-1-bottom"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row3-2-top"
+                                    id="input-row3-2-top"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row3-2-bottom"
+                                    id="input-row3-2-bottom"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row4-1-top"
+                                    id="input-row4-1-top"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row4-1-bottom"
+                                    id="input-row4-1-bottom"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row4-2-top"
+                                    id="input-row4-2-top"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row4-2-bottom"
+                                    id="input-row4-2-bottom"
+                                    value="Text"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                        </div>
+                        <!-- engraving-double line-layout -->
+
+                        <!-- engraving mixing layout -->
+                        <div class="engraving-mixing-layout engraving-layout">
+                            <div class="engraving-double-line-row">
+                                <div class="icon-selector-container-mx row1-1">
+                                    <i class=""></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row1-1-top"
+                                    id="inputmx-row1-1-top"
+                                    value="Mixing"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row1-1-bottom"
+                                    id="inputmx-row1-1-bottom"
+                                    value=""
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <div class="icon-selector-container-mx row1-2">
+                                    <i class=""></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row1-2-top"
+                                    id="inputmx-row1-2-top"
+                                    value="Mixing"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row1-2-bottom"
+                                    id="inputmx-row1-2-bottom"
+                                    value=""
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <div class="icon-selector-container-mx row2-1">
+                                    <i class=""></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row2-1-top"
+                                    id="inputmx-row2-1-top"
+                                    value=""
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row2-1-bottom"
+                                    id="inputmx-row2-1-bottom"
+                                    value="Mixing"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <div class="icon-selector-container-mx row2-2">
+                                    <i class=""></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row2-2-top"
+                                    id="inputmx-row2-2-top"
+                                    value=""
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row2-2-bottom"
+                                    id="inputmx-row2-2-bottom"
+                                    value="Mixing"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <div class="icon-selector-container-mx row3-1">
+                                    <i class=""></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row3-1-top"
+                                    id="inputmx-row3-1-top"
+                                    value="Mixing"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row3-1-bottom"
+                                    id="inputmx-row3-1-bottom"
+                                    value=""
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <div class="icon-selector-container-mx row3-2">
+                                    <i class=""></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row3-2-top"
+                                    id="inputmx-row3-2-top"
+                                    value="Mixing"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row3-2-bottom"
+                                    id="inputmx-row3-2-bottom"
+                                    value=""
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <div class="icon-selector-container-mx row4-1">
+                                    <i class=""></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row4-1-top"
+                                    id="inputmx-row4-1-top"
+                                    value=""
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row4-1-bottom"
+                                    id="inputmx-row4-1-bottom"
+                                    value="Mixing"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                            <div class="engraving-double-line-row">
+                                <div class="icon-selector-container-mx row4-2">
+                                    <i class=""></i>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input row4-2-top"
+                                    id="inputmx-row4-2-top"
+                                    value=""
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                                <input
+                                    type="text"
+                                    class="engraving-double-line-input is-bottom row4-2-bottom"
+                                    id="inputmx-row4-2-bottom"
+                                    value="Mixing"
+                                    placeholder="Maximum 8 characters"
+                                    maxlength="8"
+                                />
+                            </div>
+                        </div>
+                        <!-- engraving mixing layout -->
+
+                        <!-- engraving-icon only-layout -->
+                        <div class="engraving-icon-only-layout engraving-layout">
+                            <div class="icon-selector-container-outside row1-1">
+                                <i class=""></i>
+                            </div>
+                            <div class="icon-selector-container-outside row1-2">
+                                <i class=""></i>
+                            </div>
+                            <div class="icon-selector-container-outside row2-1">
+                                <i class=""></i>
+                            </div>
+                            <div class="icon-selector-container-outside row2-2">
+                                <i class=""></i>
+                            </div>
+                            <div class="icon-selector-container-outside row3-1">
+                                <i class=""></i>
+                            </div>
+                            <div class="icon-selector-container-outside row3-2">
+                                <i class=""></i>
+                            </div>
+                            <div class="icon-selector-container-outside row4-1">
+                                <i class=""></i>
+                            </div>
+                            <div class="icon-selector-container-outside row4-2">
+                                <i class=""></i>
+                            </div>
+                        </div>
+                        <!-- engraving-icon only-layout -->
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="footer"></section> -->
+            <!-- <div class="button-container">
+                <div class="button-set-layout" id="button__set--layout">SET LAYOUT</div>
+            </div> -->
+        </div>
+    </body>
+</html>

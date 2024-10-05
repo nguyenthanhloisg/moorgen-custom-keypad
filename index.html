@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Moorgen Artwork Tool</title>
+        <link href="./css/collection-style.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" type="image/png" href="./img/logo-title-page.png">
+        <script src="./js/collection-script.js"></script>
+    </head>
+    <body class="body">
+        <div class="loader"></div>
+
+        <style>.loader{position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#fefefe;transition:opacity 0.75s,visibility 0.75s;z-index:1}.loader--hidden{opacity:0;visibility:hidden}.loader::after{content:"";width:75px;height:75px;border:15px solid #fefefe;border-top-color:var(--yellow-hover);border-radius:50%;animation:loading 0.75s ease infinite}@keyframes loading{from{transform:rotate(0turn)}to{transform:rotate(1turn)}}</style>
+        
+        <script>window.addEventListener("load",()=>{const loader=document.querySelector(".loader");loader.classList.add("loader--hidden");loader.addEventListener("transitionend",()=>{if(loader&&loader.parentElement){document.body.removeChild(loader)}})});</script>
+        
+        <div id="collection-page-content">
+            <section class="navigation">
+                <a href="./" class="logo-moorgen-link-home w-inline-block" id="logo-link">
+                    <img
+                        src="./img/logo-moorgen.png"
+                        alt="logo moorgen"
+                        class="logo-moorgen"
+                    />
+                </a>
+                <div class="wrapper-menu">
+                    <a
+                        href="https://moorgen.hk/pages/steve-leung-smart-panel"
+                        target="_blank"
+                        class="header-menu-item"
+                    >
+                        Steve Leung
+                    </a>
+                    <a
+                        href="https://moorgen.hk/pages/smart-panel-swiss-series"
+                        target="_blank"
+                        class="header-menu-item"
+                    >
+                        Swiss
+                    </a>
+                </div>
+            </section>
+            <section class="body-section">
+                <div class="addstep-wrapper">
+                    <ul role="list" class="list-addstep w-list-unstyled">
+                        <li class="item1-collection-page">1. Collection</li>
+                        <li class="item2-collection-page">2. Materials</li>
+                        <li class="item3-collection-page">3. Style</li>
+                        <li class="item4-collection-page">4. Engraving</li>
+                        <li class="item5-collection-page">5. Configuration</li>
+                        <li class="item6-collection-page">6. Create</li>
+                    </ul>
+                </div>
+                
+                <div class="collection-product-container">
+                    <div class="collection-product-col">
+                        <a href="./materials/" id="materials-link" onclick="selectImage('supercar-snowflake-silver.jpg')">
+                            <img
+                                src="./img/supercar-snowflake-silver.jpg"
+                                alt="supercar-snowflake-silver.jpg"
+                                class="collection-product-image"
+                            />
+                        </a>
+                        <div class="collection-product-name">
+                            <div class="text-medium-12">Steve Leung Series</div>
+                        </div>
+                    </div>
+                    <div class="collection-product-col">
+                        <a href="./materials/" id="materials-link-2" onclick="selectImage('swiss-snowflake-silver.jpg')">
+                            <img
+                                src="./img/swiss-snowflake-silver.jpg"
+                                alt="swiss-snowflake-silver.jpg"
+                                class="collection-product-image"
+                            />
+                        </a>
+                        <div class="collection-product-name">
+                            <div class="text-medium-12">Swiss Series</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

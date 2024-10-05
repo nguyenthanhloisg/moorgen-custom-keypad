@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- change title -->
+        <title>Moorgen Artwork Tool</title>
+        <!-- add logo -->
+        <link rel="icon" type="image/png" href="../img/logo-title-page.png" />
+        <link href="../css/create-style.css" rel="stylesheet" type="text/css" />
+        <script src="../js/html2canvas.js" ></script>
+        <script src="../js/create-script.js" ></script>
+    </head>
+    <body>
+        <div class="loader"></div>
+
+        <style>.loader{position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#fefefe;z-index:1}.loader--hidden{opacity:0;visibility:hidden}.loader::after{content:""}</style>
+        
+        <script>window.addEventListener("load",()=>{const loader=document.querySelector(".loader");loader.classList.add("loader--hidden");loader.addEventListener("transitionend",()=>{if(loader&&loader.parentElement){document.body.removeChild(loader)}})});</script>
+
+        <div id="style-page-content">
+            <section class="navigation">
+                <a href="../" class="logo-moorgen-link-home w-inline-block" id="logo-link">
+                    <img src="../img/logo-moorgen.png" alt="logo moorgen" class="logo-moorgen" />
+                </a>
+                <div class="wrapper-menu">
+                    <a
+                        href="https://moorgen.hk/pages/steve-leung-smart-panel"
+                        target="_blank"
+                        class="header-menu-item"
+                    >
+                        Steve Leung
+                    </a>
+                    <a
+                        href="https://moorgen.hk/pages/smart-panel-swiss-series"
+                        target="_blank"
+                        class="header-menu-item"
+                    >
+                        Swiss
+                    </a>
+                </div>
+            </section>
+            <section class="body-section">
+                <div class="addstep-wrapper">
+                    <ul role="list" class="list-addstep w-list-unstyled">
+                        <li class="item1-create-page">1. Collection</li>
+                        <li class="item2-create-page">2. Materials</li>
+                        <li class="item3-create-page">3. Style</li>
+                        <li class="item4-create-page">4. Engraving</li>
+                        <li class="item5-create-page">5. Configuration</li>
+                        <li class="item6-create-page">6. Create</li>
+                    </ul>
+                </div>
+                <!-- direct-button -->
+                <div class="direct-button-container">
+                    <a href="../configuration/">
+                        <div class="direct-button">
+                            <svg
+                                width="16"
+                                height="18"
+                                viewBox="0 0 16 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="direct-button-image"
+                            >
+                                <path
+                                    d="M0.999999 10.7454C-0.333334 9.96966 -0.333334 8.03033 0.999999 7.2546L13 0.273018C14.3333 -0.502713 16 0.466952 16 2.01842L16 15.9816C16 17.533 14.3333 18.5027 13 17.727L0.999999 10.7454Z"
+                                    fill="#333333"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- <a href="../create/">
+                        <div class="direct-button">
+                            <svg
+                                width="16"
+                                height="18"
+                                viewBox="0 0 16 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="direct-button-image"
+                            >
+                                <path
+                                    d="M15 7.25461C16.3333 8.03034 16.3333 9.96967 15 10.7454L3 17.727C1.66667 18.5027 -6.72981e-08 17.533 0 15.9816L6.05683e-07 2.01842C6.72982e-07 0.466953 1.66667 -0.502711 3 0.273021L15 7.25461Z"
+                                    fill="#333333"
+                                />
+                            </svg>
+                        </div>
+                    </a> -->
+                </div>
+            </section>
+
+            <div class="create-page-main-container">
+                <div class="title-create-container">
+                    <div class="text-medium-20">The artwork is ready!</div>
+                    <div class="text-medium-14">You can now add it to your project or edit</div>
+                </div>
+                <div class="grid-layout" id="output-image__outside">
+                    <img id="output-image" alt="Engraved image" class="create-output-image" />
+                    <div class="artwork-info-container">
+                        <div class="text-medium-24 is-right" id="artwork-name"></div>
+                        <div class="text-medium-16 is-right" id="protocol-name"></div>
+                        <div class="text-medium-16 is-right" id="component-name"></div>
+                        <div class="artwork-info-button-container">
+                            <div class="button-download-text" id="button-download">
+                                Download Artwork
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <a href="../" id="button-reset">
+                    <div class="button-make-new">MAKE A NEW ARTWORK</div>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
